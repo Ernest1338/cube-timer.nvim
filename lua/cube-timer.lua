@@ -145,7 +145,7 @@ function M.handle_click(_, _, _, start_row, start_col, _, _, _)
             M.state.timer = vim.loop.hrtime()
             M.state.timer_running = true
         end
-    elseif key == "`" then
+    elseif key == "\\" then
         if M.state.timer_running == false then
             local choice = vim.fn.confirm("Do you want to remove latest time?", "&Yes\n&No", 2)
 

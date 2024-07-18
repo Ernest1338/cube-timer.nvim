@@ -39,7 +39,7 @@ Key bindings:
 - `3` - change to 3x3 scramble
 - `4` - change to 4x4 scramble
 - `space` - start/stop timer
-- `` ` `` - remove last time
+- `\` - remove last time
 - `|` - clear times from current session
 
 ## 🔧 Configuration
