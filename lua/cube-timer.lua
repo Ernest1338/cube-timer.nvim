@@ -182,14 +182,14 @@ end
 
 function M.start()
     -- Create a new buffer
-    M.state.buf = api.nvim_create_buf(true, true)
+    M.state.buf = api.nvim_create_buf(false, true)
 
     -- Change some buffer options
     api.nvim_buf_set_name(M.state.buf, "Cube Timer")
-    api.nvim_buf_set_option(M.state.buf, "filetype", "cube-timer")
+    api.nvim_set_option_value("filetype", "cube-timer", { buf = M.state.buf })
 
     local ui_info = api.nvim_list_uis()[1]
-    local width = math.floor(ui_info.width * M.state.size) / 2
+    local width = math.floor(math.floor(ui_info.width * M.state.size) / 2)
     local height = math.floor(ui_info.height * M.state.size)
     local border = "rounded"
 
